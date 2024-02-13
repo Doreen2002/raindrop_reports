@@ -53,10 +53,10 @@ app_license = "MIT"
 # ----------
 
 # add methods and filters to jinja environment
-# jinja = {
-#	"methods": "raindrop_reports.utils.jinja_methods",
-#	"filters": "raindrop_reports.utils.jinja_filters"
-# }
+jinja = {
+	"methods": "raindrop_reports.utils.jinja_methods",
+	# "filters": "raindrop_reports.utils.jinja_filters"
+}
 
 # Installation
 # ------------
