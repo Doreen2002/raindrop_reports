@@ -40,7 +40,9 @@
 				<td>{%= frappe.datetime.str_to_user(data[i].posting_date) %}</td>
 				<td>{%= data[i].voucher_type %}
 					<br>{%= data[i].voucher_no %}
-					{% if data[i].voucher_type == "Journal Entry" %}  {% for item in data[i].accounts %}  {{item.account}} {% endfor %} {% endif %}
+					{% if data[i].voucher_type == "Journal Entry" %}  
+					 <b> Item</b>
+					{% endif %}
 				</td>
 				{% var longest_word = cstr(data[i].remarks).split(" ").reduce((longest, word) => word.length > longest.length ? word : longest, ""); %}
 				<td {% if longest_word.length > 45 %} class="overflow-wrap-anywhere" {% endif %}>
