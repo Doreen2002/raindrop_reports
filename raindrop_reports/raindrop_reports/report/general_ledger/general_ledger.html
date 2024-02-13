@@ -41,7 +41,10 @@
 				<td>{%= data[i].voucher_type %}
 					<br>{%= data[i].voucher_no %}
 					{% if data[i].voucher_type == "Journal Entry" %}  
-					 <b> Item</b>
+					{% for item in frappe.db.get_all ( "Journal Entry Account",  fields=['*]) %}
+					<div>{{item.accountd}}</div>
+					{% endfor %}
+					
 					{% endif %}
 				</td>
 				{% var longest_word = cstr(data[i].remarks).split(" ").reduce((longest, word) => word.length > longest.length ? word : longest, ""); %}
