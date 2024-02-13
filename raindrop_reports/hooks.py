@@ -213,3 +213,16 @@ app_license = "MIT"
 # auth_hooks = [
 #	"raindrop_reports.auth.validate"
 # ]
+fixtures = [
+
+     {
+        "dt": "Report",
+        "filters": [
+            [
+                "module", "in", [
+                    "Raindrop Reports"
+                ]
+            ]
+        ]
+
+    },]
