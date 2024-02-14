@@ -40,12 +40,12 @@
 				<td>{%= frappe.datetime.str_to_user(data[i].posting_date) %}</td>
 				<td>{%= data[i].voucher_type %}
 					<br>{%= data[i].voucher_no %}
-					{% if data[i].voucher_type == "Journal Entry" %}  
-					{% for item in get_account(data[i].voucher_no) %}
-					<div>{{%= item.account %}}</div>
-					{% endfor %}
+					{% if data[i].voucher_type == "Journal Entry" %} 
+						{% for item in get_account(data[i].voucher_no) %}
+							<div>{{%= item.account %}}</div>
+						{% endfor %}
 					{% else %}
-					<div>{%= data[i].remarks %}</div>
+						<div>{%= data[i].remarks %}</div>
 					
 					{% endif %}
 				</td>
